@@ -21,7 +21,6 @@ F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\staticwebassets.build.jso
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\staticwebassets.build.json.cache
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\staticwebassets.development.json
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\EasyAPI.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\refint\EasyAPI.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\EasyAPI.pdb
@@ -60,7 +59,6 @@ F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\System.Composition.Conven
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\System.Composition.Hosting.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\System.Composition.Runtime.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\System.Composition.TypedParts.dll
-F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\System.Text.Json.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -128,3 +126,8 @@ F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAna
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\EasyAPI.csproj.AssemblyReference.cache
 F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\EasyAPI.csproj.Up2Date
+F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Repository\EasyAPI\EasyAPI\EasyAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Repository\EasyAPI\EasyAPI\EasyAPI\obj\Debug\net9.0\EasyAPI.MvcApplicationPartsAssemblyInfo.cs

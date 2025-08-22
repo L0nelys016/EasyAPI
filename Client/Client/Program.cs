@@ -4,7 +4,7 @@ using Client.Models;
 using Newtonsoft.Json;
 
 HttpClient client = new HttpClient();
-client.BaseAddress = new Uri("https://localhost:7088/");
+client.BaseAddress = new Uri("http://localhost:5200/");
 
 HttpResponseMessage responseMessage = await client.GetAsync("ticketlist");
 string message = await responseMessage.Content.ReadAsStringAsync();
@@ -45,13 +45,16 @@ if (updateTicketUser.IsSuccessStatusCode)
 }
 else
     Console.WriteLine("Провал!!!");
+//
+// Ticket CreateTicket = new Ticket()
+// { 
+//     TicketNo = "123",
+//     BookRef = "BF16DC",
+//     PassengerId = "123",
+//     PassengerName = "Filip Circorov",
+//     ContactData = "123",
+// };
+// JsonContent contentCreate = JsonContent.Create(CreateTicket);
+// HttpResponseMessage createTicketUser = await client.PostAsync("Createticket", contentCreate);
 
-Ticket CreateTicket = new Ticket()
-{ 
-    TicketNo = "123",
-    BookRef = "BF16DC",
-    PassengerId = "123",
-    PassengerName = "123",
-    ContactData = "123",
-};
 
