@@ -1,6 +1,7 @@
 using EasyAPI.Models;
 using EasyAPI.Repositories;
 using Newtonsoft.Json;
+using EasyAPI.Models.DTOs;
 
 namespace EasyAPI.Services;
 
@@ -30,7 +31,34 @@ public class UserService
 
     public async Task DeleteUserById(int userid) => await _userRepository.DeleteUserById(userid);
 
-    public async Task UpdateUser(User user) => await _userRepository.UpdateUser(user);
+    public async Task UpdateUser(int id, UserDto userDto)
+    {
+        var user = await _userRepository.GetUserById(id);
+        
+        if (user == null)
+            throw new Exception("User not found");
 
-    public async Task<User> AddUser(User user) => await _userRepository.AddUser(user);
+        user.Username = string.IsNullOrEmpty(userDto.Username) ? user.Username : userDto.Username;
+        user.Email = string.IsNullOrEmpty(userDto.Email) ? user.Email : userDto.Email;
+        user.Password = string.IsNullOrEmpty(userDto.Password) ? user.Password : userDto.Password;
+        user.FullName = string.IsNullOrEmpty(userDto.FullName) ? user.FullName : userDto.FullName;
+
+        await _userRepository.SaveChangesAsync();
+    }
+
+    public async Task<User> AddUser(UserDto userDto)
+    {
+        User user = new User
+        {
+            Username = userDto.Username,
+            Email = userDto.Email,
+            Password = userDto.Password,
+            FullName = userDto.FullName,
+            CreatedAt = DateTime.Now,
+            IsActive = true
+        };
+
+        var result = await _userRepository.AddUser(user);
+        return result;
+    }
 }

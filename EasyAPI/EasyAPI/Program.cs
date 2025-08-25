@@ -16,7 +16,11 @@ builder.Services.AddScoped<UserService>();
 
 WebApplication app = builder.Build();
 
-app.MapGet("/", () => "EasyAPI");
+app.MapGet("/", (HttpContext context) =>
+{
+    context.Response.Redirect("/swagger/index.html");
+});
+
 app.MapUserEndPoints();
 
 if (app.Environment.IsDevelopment())
