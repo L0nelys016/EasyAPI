@@ -12,7 +12,7 @@ public class UserRepository(PostgresContext postgresContext) : RepositoryBase(po
         User? users = await Сontext.Users.FirstOrDefaultAsync(x => x.UserId == userid);
         return users ?? throw new Exception("users not found");
     }
-    
+
     public async Task SaveChangesAsync() => await Сontext.SaveChangesAsync();
 
     public async Task DeleteUserById(int userid)
@@ -25,7 +25,7 @@ public class UserRepository(PostgresContext postgresContext) : RepositoryBase(po
         }
     }
 
-    public async Task UpdateUser(User user) 
+    public async Task UpdateUser(User user)
     {
         try
         {

@@ -1,7 +1,7 @@
 using EasyAPI.Models;
+using EasyAPI.Models.DTOs;
 using EasyAPI.Repositories;
 using Newtonsoft.Json;
-using EasyAPI.Models.DTOs;
 
 namespace EasyAPI.Services;
 
@@ -13,7 +13,7 @@ public class UserService
 
     public async Task<IResult> GetUsers() =>
         Results.Text(
-             JsonConvert.SerializeObject(
+            JsonConvert.SerializeObject(
                 await _userRepository.GetUsers(),
                 Formatting.Indented,
                 new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore }
@@ -33,8 +33,8 @@ public class UserService
 
     public async Task UpdateUser(int id, UserDto userDto)
     {
-        var user = await _userRepository.GetUserById(id);
-        
+        User user = await _userRepository.GetUserById(id);
+
         if (user == null)
             throw new Exception("User not found");
 
@@ -55,10 +55,10 @@ public class UserService
             Password = userDto.Password,
             FullName = userDto.FullName,
             CreatedAt = DateTime.Now,
-            IsActive = true
+            IsActive = true,
         };
 
-        var result = await _userRepository.AddUser(user);
+        User result = await _userRepository.AddUser(user);
         return result;
     }
 }
